@@ -1,10 +1,10 @@
 package client;
 
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-
+import shared.operation;
 import java.util.Scanner;
 
 public class client {
@@ -14,7 +14,7 @@ try {
             System.out.println("Client connecté au serveur.");
 
             DataInputStream in = new DataInputStream(socket.getInputStream());
-            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+            ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
             Scanner scanner = new Scanner(System.in);
             int a1,a2;
             String x;
@@ -22,17 +22,13 @@ try {
         do{
                 System.out.println("Entrez un entier : "); 
                 a1 = scanner.nextInt();
-                out.writeInt(a1);
                 System.out.println("Entrez un opperation + - / * : ");
                 x = scanner.next();
-                out.writeUTF(x); 
                 System.out.println("Entrez un entier : ");
                 a2 = scanner.nextInt();
-                out.writeInt(a2);
+                operation op= new operation(a1,x,a2);
+                out.writeObject(op);
                 String res = in.readUTF();
-                if (res.equals("error")) {
-                    System.out.println("Opérateur non valide envoyé au serveur.");
-                }
                 System.out.println("Résultat reçu du serveur: " + res);
                 System.out.println("Voulez-vous continuer? (true/false)");
                  t = scanner.nextBoolean();
