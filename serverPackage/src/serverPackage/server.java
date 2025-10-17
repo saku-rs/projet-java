@@ -22,24 +22,29 @@ public class server {
                     int a1 = in.readInt();
                     int b1 = in.readInt();
                     System.out.println("resultat :" + (a1+b1));
+                    out.writeInt(a1+b1);
 
                 } else if (x==2) {
                     System.out.println(" client choisi soustraction");
                     int a2 = in.readInt();
                     int b2 = in.readInt();
                     System.out.println("resultat :" + (a2-b2));
+                    out.writeInt(a2-b2);
                 }
                 else if (x==3) {
                     System.out.println(" client choisi multiplication");
                     int a3 = in.readInt();
                     int b3 = in.readInt();  
                     System.out.println("resultat :" + (a3*b3));
+                    out.writeInt(a3*b3);
+
                 }
                 else if (x==4) {
                     System.out.println(" client choisi division");
                     int a4 = in.readInt();
                     int b4 = in.readInt();  
                     System.out.println("resultat :" + (a4/b4));
+                    out.writeInt(a4/b4);
                     
                 }
                 else if (x==5) {

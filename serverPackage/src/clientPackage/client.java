@@ -35,13 +35,16 @@ try {
                         int b1 = scanner.nextInt();
                         out.writeInt(a1);
                         out.writeInt(b1);
+                        System.out.println("resultat du serveur :" + in.readInt());
                         break;
+                        
                     case 2:
                         System.out.println(" donner deux nombres pour soustraction");   
                         int a2 = scanner.nextInt();
                         int b2 = scanner.nextInt();
                         out.writeInt(a2);
                         out.writeInt(b2);
+                        System.out.println("resultat du serveur :" + in.readInt());
                         break;
                     case 3:
                         System.out.println(" donner deux nombres pour multiplication"); 
@@ -49,6 +52,7 @@ try {
                         int b3 = scanner.nextInt();
                         out.writeInt(a3);
                         out.writeInt(b3);
+                        System.out.println("resultat du serveur :" + in.readInt());
                         break;
                     case 4:
                         System.out.println(" donner deux nombres pour division"); 
@@ -56,6 +60,7 @@ try {
                         int b4 = scanner.nextInt();
                         out.writeInt(a4);
                         out.writeInt(b4);
+                        System.out.println("resultat du serveur :" + in.readInt());
                         break;
                     case 5:
                         System.out.println(" quitter");
