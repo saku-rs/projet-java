@@ -17,8 +17,8 @@ try {
             ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream());
             Scanner scanner = new Scanner(System.in);
             int a1,a2;
-            String x;
             boolean t;
+            String x;
         do{
                 System.out.println("Entrez un entier : "); 
                 a1 = scanner.nextInt();
