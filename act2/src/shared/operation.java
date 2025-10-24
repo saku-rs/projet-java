@@ -10,13 +10,13 @@ public class operation implements Serializable {
         this.operateur = operateur;
         this.secondop = secondop;
     }
-    public int getFirstop() {
+    public int getA1() {
         return firstop;
     }
-    public String getOperateur() {
+    public String getOp() {
         return operateur;
     }
-    public int getSecondop() {
+    public int getA2() {
         return secondop;
     }
 }

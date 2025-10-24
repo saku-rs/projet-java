@@ -16,6 +16,7 @@ public class servermultithread {
             System.out.println("Client connected: " + count);
             Thread t = new Thread(new ClientHandler(socketclient,count));
             t.start();
+            
         }
     } catch (Exception e) {
         e.printStackTrace();

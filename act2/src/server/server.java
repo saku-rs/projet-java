@@ -16,9 +16,9 @@ public class server {
             do{            
             operation op = (operation) in.readObject(); 
             System.out.println("Reçu du client: " + op);
-            int a1 = op.getFirstop();
-            String x = op.getOperateur();
-            int a2 = op.getSecondop();
+            int a1 = op.getA1();
+            String x = op.getOp();
+            int a2 = op.getA2();
             String res;
             switch (x) {
                 case "+":
