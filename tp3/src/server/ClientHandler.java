@@ -23,7 +23,7 @@ public class ClientHandler implements Runnable {
             boolean t;
             do {
                 operation operation = (operation) in.readObject();
-
+                servermultithread ser = new servermultithread();
                 int a1 = operation.getA1();
                 String op = operation.getOp();
                 int a2 = operation.getA2();
